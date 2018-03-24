@@ -2,13 +2,19 @@
 <html xmlns:th = "www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Seleccione su carro</title>
 </head>
 <body>
 <form action="#" th:action="@{/carro}" th:object ="${carro}" method="post">
 	<p>Name: <input type="text" th:field="*{name}"></p>
 	<p>Kilometraje: <input type="text" th:field="*{recorrido}"></p>
-	<p>Vehiculo: <input type="text" th:field="*{vehiculo}"></p>
+	<p>Vehiculo: 
+	<select th:field="*{vehiculo}">
+		<option value="1">Carro1</option>
+		<option value="2">Carro2</option>
+		<option value="3">Carro3</option>
+	</select>
+	</p>
 	<p><input type="submit" value="Calcular"></p>
 </form>
 </body>

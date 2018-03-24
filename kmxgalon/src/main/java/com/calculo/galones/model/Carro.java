@@ -5,7 +5,9 @@ import java.io.Serializable;
 public class Carro implements Serializable{
 	private String name;
 	private Integer recorrido;
-	private String vehiculo;
+	private char vehiculo;
+	private String vehiculoName;
+	private double Resultado;
 	public String getName() {
 		return name;
 	}
@@ -18,11 +20,23 @@ public class Carro implements Serializable{
 	public void setRecorrido(Integer recorrido) {
 		this.recorrido = recorrido;
 	}
-	public String getVehiculo() {
+	public char getVehiculo() {
 		return vehiculo;
 	}
-	public void setVehiculo(String vehiculo) {
+	public void setVehiculo(char vehiculo) {
 		this.vehiculo = vehiculo;
+	}
+	public double getResultado() {
+		return Resultado;
+	}
+	public void setResultado(double resultado) {
+		Resultado = resultado;
+	}
+	public String getVehiculoName() {
+		return vehiculoName;
+	}
+	public void setVehiculoName(String vehiculoName) {
+		this.vehiculoName = vehiculoName;
 	}
 
 }
