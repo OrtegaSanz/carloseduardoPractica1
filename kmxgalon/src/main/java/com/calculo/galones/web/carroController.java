@@ -18,13 +18,13 @@ public class carroController {
 	@PostMapping("/carro")
 	private String submitForm(@ModelAttribute Carro carro){
 		if(carro.getVehiculo() =='1'){
-			carro.setResultado(carro.getRecorrido()/40);
+			carro.setResultado(carro.getRecorrido()/40.0);
 			carro.setVehiculoName("Carro1");
 		}else if(carro.getVehiculo() =='2') {
-			carro.setResultado(carro.getRecorrido()/35);
+			carro.setResultado(carro.getRecorrido()/35.0);
 			carro.setVehiculoName("Carro2");
 		}else if(carro.getVehiculo() =='3') {
-			carro.setResultado(carro.getRecorrido()/45);
+			carro.setResultado(carro.getRecorrido()/45.0);
 			carro.setVehiculoName("Carro3");
 		}
 		return "resultado";
